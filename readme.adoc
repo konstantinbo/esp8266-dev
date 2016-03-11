@@ -2,6 +2,7 @@
 
 
 == Software Requirements:
+=== Arduino IDE (Outdated)
 
 * https://www.arduino.cc/en/Main/Software[Arduino IDE]
 * https://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx[CP2102 USB Drivers] (instructions will be updated)
@@ -21,6 +22,12 @@
 * https://github.com/adafruit/DHT-sensor-library/releases[DHT11 Library] for the temperature and humidity sensor
 ** Download zip and import in Arduino IDE (Examples not working, just copy & paste instead)
 
+=== PlatformIO
+
+* Install http://platformio.org/#!/[PlatformIO IDE and CLI]
+* CLI is only needed if you have problems with the IDE ('permission denied' while upload)
+* Best practice so far: Write code in Atom, build and upload via command line, create alias for `sudo platformio run; sudo platformio run -t upload` (build and upload) and `sudo platformio serialports monitor -b 115200` (Serial monitor)
+* Note: External libraries don't seem to get recognized in project folder. Put them instead into '~/.platformio/packages/framework-arduinoespressif/libraries'
 
 == Wiring:
 * Single Matrix Wiring:
